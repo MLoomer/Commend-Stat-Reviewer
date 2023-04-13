@@ -5,7 +5,7 @@ function single(e) {
   let blob = e.upFile.setContentType(MimeType.MICROSOFT_EXCEL).copyBlob()
   let file = DriveApp.createFile(blob);
   file.moveTo(parentFolder);
-  Logger.log("1");
+
   let id = file.getId();
   blob = file.getBlob();
   let newFile = {
